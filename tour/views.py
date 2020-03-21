@@ -6,23 +6,17 @@ from django.views import View
 class MainView(View):
     def get(self, request, *args, **kwargs):
         return render(
-            request, 'tour/index.html', context={ 
-
-            }
+            request, 'tour/index.html'
         )
         
 class DepartureView(View):
-    def get(self, request, *args, **kwargs):
+    def get(self, request, departure=1):
         return render(
-            request, 'tour/departure.html', context={    
-
-            }
+            request, 'tour/departure.html'
         )
 
 class TourView(View):
-    def get(self, request, *args, **kwargs):
+    def get(self, request, id=1):
         return render(
-            request, 'tour/tour.html', context={   
-                             
-            }
+            request, 'tour/tour.html'
         )
