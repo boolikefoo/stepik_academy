@@ -10,7 +10,7 @@ class MainView(View):
         )
         
 class DepartureView(View):
-    def get(self, request, departure=1):
+    def get(self, request, departure="departure"):
         return render(
             request, 'tour/departure.html'
         )
